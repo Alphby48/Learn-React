@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Latihan React</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+
+      function ButtonUI({ name, onClick }) {
+        return <button onClick={onClick}>{name}</button>;
+      }
+
+      function UITampil({ caounter }) {
+        return <h1>{caounter}</h1>;
+      }
+
+      function HomePage() {
+        const [counter, setCounter] = React.useState(0);
+
+        function tambah() {
+          setCounter(counter + 1);
+        }
+
+        function kurang() {
+          setCounter(counter - 1);
+        }
+
+        function reset() {
+          setCounter(0);
+        }
+
+        return (
+          <>
+            <ButtonUI name="+" onClick={tambah} />
+            <UITampil caounter={counter} />
+            <ButtonUI name="-" onClick={kurang} />
+            <ButtonUI name="reset" onClick={reset} />
+          </>
+        );
+      }
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
