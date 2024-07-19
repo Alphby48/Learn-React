@@ -1,0 +1,52 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  .layout {
+    min-width: 100%;
+    border: 1px solid black;
+    h1 {
+      text-align: center;
+    }
+    .boxx {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      .box-card {
+        width: 65%;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        .card {
+          width: 220px;
+          margin: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .image {
+            width: 200px;
+          }
+        }
+      }
+      .box-cart {
+        width: 33%;
+        border: 1px solid black;
+        padding: 1rem;
+        h3 {
+          text-align: center;
+        }
+        .cart {
+          border-radius: 20px;
+          background-color: rgb(15, 240, 240);
+          width: 100%;
+          border: 1px solid black;
+          padding: 1rem;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}
