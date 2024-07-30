@@ -7,15 +7,10 @@ const Card = (props) => {
         <img src={image} className="card-img-top image" alt={title} />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">
-            {price.toLocaleString("id-ID", {
-              style: "currency",
-              currency: "IDR",
-            })}
-          </p>
+          <p className="card-text">Member {price}</p>
           <div>
-            <Button onClick={onClick} datatype={val}>
-              Beli
+            <Button onClick={() => onClick(val)} datatype={val}>
+              Detail
             </Button>
           </div>
         </div>
